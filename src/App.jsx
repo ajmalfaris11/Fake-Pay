@@ -1,16 +1,18 @@
-import { useState } from 'react'
-import './App.css'
+// src/App.jsx
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import InputPage from "./pages/InputPage";
+import SuccessPagePlatform1 from "./pages/GpaySuccessPage";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <h1>hello world</h1>
-      </div>
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/input/:platform" element={<InputPage />} />
+        <Route path="/success/platform1" element={<SuccessPagePlatform1 />} />
+        <Route path="/success/platform2" element={<SuccessPagePlatform2 />} />
+      </Routes>
+    </Router>
+  );
 }
-
-export default App
