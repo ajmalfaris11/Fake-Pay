@@ -7,12 +7,11 @@ export default function InputPage() {
   const { platform } = useParams();
   const navigate = useNavigate();
 
-
   const [formData, setFormData] = useState({
     receiverName: "Fashion Friday",
     senderName: "",
     receiverNumber: "+91 75589 69093",
-    amount: "999",
+    amount: "",
     dateTime: "",
     bank: "",
     upiTransactionId: "",
@@ -21,29 +20,22 @@ export default function InputPage() {
     googleTransactionId: "",
   });
 
-
-
   function generateUpiId() {
     const firstDigit = '5';
     let remainingDigits = '';
-
     for (let i = 0; i < 11; i++) {
       remainingDigits += Math.floor(Math.random() * 10);
     }
-
     return `${firstDigit}${remainingDigits}`;
   }
 
-  // randomly generate a transaction ID
   function generateTransactionId() {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-';
     const firstDigit = 'CICAgKj';
     let remainingDigits = '';
-
     for (let i = 0; i < 7; i++) {
       remainingDigits += chars.charAt(Math.floor(Math.random() * chars.length));
     }
-
     return `${firstDigit}${remainingDigits}`;
   }
 
@@ -57,87 +49,103 @@ export default function InputPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const updatedFormData = {
       ...formData,
       upiTransactionId: generateUpiId(),
       googleTransactionId: generateTransactionId(),
     };
-
     setFormData(updatedFormData);
     navigate(`/success/${platform}`, { state: updatedFormData });
   };
 
   return (
-    <div className="w-full flex flex-col justify-center items-center">
+    <div className="min-h-screen w-full bg-gray-50 flex flex-col items-center">
       <NavBar />
-      <h2 className="text-center text-2xl mt-4">
-        Input Payment Details for {platform}
-      </h2>
-      <form onSubmit={handleSubmit} className="mx-auto mt-2 p-4 bg-white w-full max-w-2xl grid grid-cols-1 md:grid-cols-2 gap-4">
 
+      <div className="mt-20 w-full max-w-2xl px-3">
+        <h2 className="text-center text-3xl font-bold text-gray-900 mb-2">
+          Enter Payment Details
+        </h2>
+        <p className="text-center text-gray-500 mb-6">
+          Complete the form to generate your {platform} payment success page.
+        </p>
 
-        <label>
-          sender name
-          <input
-            type="text"
-            name="senderName"
-            value={formData.senderName}
-            onChange={handleChange}
-            className="border rounded p-2 w-full"
-          />
-        </label>
-
-        <label>
-          Amount
-          <input
-            type="text"
-            name="amount"
-            value={formData.amount}
-            onChange={handleChange}
-            className="border rounded p-2 w-full"
-          />
-        </label>
-
-
-        <label>
-          Date & Time
-          <input
-            type="datetime-local"
-            name="dateTime"
-            value={formData.dateTime}
-            onChange={handleChange}
-            className="border rounded p-2 w-full"
-          />
-        </label>
-
-        <div className="w-full mb-4">
-          <label className="block mb-2 text-sm font-medium text-gray-900">
-            Choose your bank:
-          </label>
-          <select
-            name="senderBank"
-            value={formData.senderBank}
-            onChange={handleChange}
-            className="block w-full p-3 border border-gray-300 rounded-md bg-white text-gray-900"
-          >
-            <option value="">-- Select Bank --</option>
-            {bankList.map((bank) => (
-              <option key={bank.id} value={bank.name}>
-                {bank.name}
-              </option>
-            ))}
-          </select>
-
-        </div>
-
-        <button
-          type="submit"
-          className="bg-blue-600 text-white px-4 py-3 rounded w-full col-span-full"
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white rounded-xl shadow-md p-6 grid grid-cols-1 md:grid-cols-2 gap-6"
         >
-          Submit Payment
-        </button>
-      </form>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Sender Name
+            </label>
+            <input
+              type="text"
+              name="senderName"
+              value={formData.senderName}
+              placeholder="Enter your name"
+              onChange={handleChange}
+              className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-indigo-500"
+              required
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Amount (₹)
+            </label>
+            <input
+              type="number"
+              name="amount"
+              value={formData.amount}
+              placeholder="Payment amount"
+              onChange={handleChange}
+              className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-indigo-500"
+              required
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Date & Time
+            </label>
+            <input
+              type="datetime-local"
+              name="dateTime"
+              value={formData.dateTime}
+              onChange={handleChange}
+              className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-indigo-500"
+              required
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Sender Bank
+            </label>
+            <select
+              name="senderBank"
+              value={formData.senderBank}
+              onChange={handleChange}
+              className="border border-gray-300 rounded-lg px-4 py-2 w-full bg-white text-gray-700 focus:ring-2 focus:ring-indigo-500"
+              required
+            >
+              <option value="">-- Select Bank --</option>
+              {bankList.map((bank) => (
+                <option key={bank.id} value={bank.name}>
+                  {bank.name}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <button
+            type="submit"
+            className="bg-[#1e40af] hover:bg-[#1e3a8a] text-white font-medium px-6 py-3 rounded-lg transition w-full col-span-full"
+          >
+            Generate Payment
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
