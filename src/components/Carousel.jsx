@@ -29,6 +29,11 @@ export function CarouselCustomNavigation() {
       )}
     >
       <img
+        src={image2}
+        alt="image 2"
+        className="w-full object-cover"
+      />
+      <img
         src={image1}
         alt="image 1"
         className="w-full object-cover"
