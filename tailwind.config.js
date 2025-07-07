@@ -5,7 +5,15 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        inconsolata: ['"Inconsolata"', 'monospace'],
+        inter: ['"Inter"', 'sans-serif'],
+        mukta: ['"Mukta"', 'sans-serif'],
+        noto: ['"Noto Sans Display"', 'sans-serif'],
+        opensans: ['"Open Sans"', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 };
