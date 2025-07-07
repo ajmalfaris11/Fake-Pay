@@ -1,4 +1,7 @@
 import { Carousel } from "@material-tailwind/react";
+
+import image1 from "../assets/Carousel/buildTrust.webp";
+import image2 from "../assets/Carousel/increaseSales.webp";
  
 export function CarouselCustomNavigation() {
 
@@ -26,14 +29,14 @@ export function CarouselCustomNavigation() {
       )}
     >
       <img
-        src="Carousel/buildTrust.webp"
+        src={image1}
         alt="image 1"
         className="w-full object-cover"
       />
       <img
-        src="Carousel/increaseSales.webp"
+        src={image2}
         alt="image 2"
-        className="w-full object-cover"
+        className="w-full object-"
       />
     </Carousel>
   );
