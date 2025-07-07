@@ -5,9 +5,9 @@ export default function NavBar() {
       <span class="material-symbols-outlined">
         sort
       </span>
-      <img src="/src/assets/fakePayLogo.webp" alt="fake pay log" className="w-52 mx-auto" />
+      <img src="/src/assets/fakePayLogo.webp" alt="fake pay log" className="w-36 md:w-52 mx-auto" />
 
-      <span class="material-symbols-outlined text-3xl">
+      <span className="material-symbols-outlined text-2xl md:text-3xl">
         face_6
       </span>
     </nav>
