@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { bankList } from "../data/bankList";
 
+import ffLogo from "../assets/ffLogo.webp";
+import upiLogo from "../assets/upiLogo.webp";
+
 export default function GpaySuccessPage() {
 
   const location = useLocation();
@@ -74,7 +77,7 @@ export default function GpaySuccessPage() {
 
       {/* Logo */}
       <img
-        src="/src/assets/ffLogo.webp"
+        src={ffLogo}
         alt="Fashion Friday"
         className="w-16 h-16 mb-4 rounded-full mt-10"
       />
@@ -172,7 +175,7 @@ export default function GpaySuccessPage() {
       {/* Powered by UPI + GPay */}
       <div className="mt-6 mb-2">
         <img
-          src="/src/assets/upiLogo.webp"
+          src={upiLogo}
           alt="Powered by UPI"
           className="h-4 mx-auto mb-1"
         />
