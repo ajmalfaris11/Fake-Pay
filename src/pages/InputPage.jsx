@@ -1,6 +1,5 @@
 import { useState } from "react";
 import NavBar from "../components/NavBar";
-import InputForm from "../components/InputForm";
 import { useParams, useNavigate } from "react-router-dom";
 import { bankList } from "../data/bankList";
 
