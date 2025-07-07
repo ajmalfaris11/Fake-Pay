@@ -66,7 +66,7 @@ export default function GpaySuccessPage() {
     <div className="min-h-screen flex flex-col items-center justify-start bg-white text-center px-4 font-sans">
       {/* Navigation Bar */}
       <div
-        className={`flex justify-between items-center w-full mb-4 fixed px-4 transition-colors duration-300 ${isScrolled ? "bg-[#f3f6fd] shadow" : "bg-transparent"} py-4`}
+        className={`flex justify-between items-center w-full mb-4 fixed px-4 transition-colors duration-300 ${isScrolled ? "bg-[#f3f6fd] shadow" : "bg-transparent"} py-5`}
       >
         <span className="material-symbols-outlined text-gray-800">arrow_back</span>
         <div className="flex items-center gap-4">
@@ -79,14 +79,14 @@ export default function GpaySuccessPage() {
       <img
         src={ffLogo}
         alt="Fashion Friday"
-        className="w-[60px] h-[60px] mb-4 rounded-full mt-16"
+        className="w-[55px] h-[55px] mb-4 rounded-full mt-20"
       />
 
       {/* Merchant name & number */}
       <h1 className="text-lg font-medium text-gray-800">
         To {formData.receiverName || "Fashion Friday"}
       </h1>
-      <p className="text-gray-600 mb-3">+91 75589 69093</p>
+      <p className="text-gray-600 mb-2">+91 75589 69093</p>
 
       {/* Amount */}
       <div className="flex">
