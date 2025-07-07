@@ -1,28 +1,54 @@
 // src/pages/HomePage.jsx
 import NavBar from "../components/NavBar";
 import PlatformCard from "../components/PlatformCard";
-import { href, useNavigate } from "react-router-dom";
-import {CarouselCustomNavigation} from "../components/Carousel";
+import { useNavigate } from "react-router-dom";
+import { CarouselCustomNavigation } from "../components/Carousel";
+
+// ✅ Import icons from src/assets
+import gpayIcon from "../assets/gpayIcon.webp";
+import phonepayIcon from "../assets/phonepayIcon.webp";
+import paytmIcon from "../assets/paytmIcon.webp";
+import amazonPayIcon from "../assets/amazonePayIcon.webp";
 
 export default function HomePage() {
   const navigate = useNavigate();
 
   const platforms = [
-    { name: "google pay", description: "create with Google Pay", logo:"src/assets/gpayIcon.webp", platform: "gpay" },
-    { name: "PhonePay", description: "create with PhonePe", logo:"src/assets/phonepayIcon.webp", platform: "phonepe" },
-    { name: "Paytm", description: "create with Paytm", logo:"src/assets/paytmIcon.webp", platform: "paytm" },
-    { name: "Amazon Pay", description: "create with Amazon Pay", logo:"src/assets/amazonePayIcon.webp", platform: "amazonpay" },
+    {
+      name: "Google Pay",
+      description: "Create with Google Pay",
+      logo: gpayIcon,
+      platform: "gpay",
+    },
+    {
+      name: "PhonePe",
+      description: "Create with PhonePe",
+      logo: phonepayIcon,
+      platform: "phonepe",
+    },
+    {
+      name: "Paytm",
+      description: "Create with Paytm",
+      logo: paytmIcon,
+      platform: "paytm",
+    },
+    {
+      name: "Amazon Pay",
+      description: "Create with Amazon Pay",
+      logo: amazonPayIcon,
+      platform: "amazonpay",
+    },
   ];
 
   return (
     <div>
       <NavBar />
       <div className="p-2">
-        <CarouselCustomNavigation/>
+        <CarouselCustomNavigation />
       </div>
       <div className="p-4 grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 md:mt-20">
         {platforms.map((platform, idx) => (
-          <PlatformCard 
+          <PlatformCard
             key={idx}
             platform={platform}
             onClick={() => navigate(`/input/${platform.platform.toLowerCase()}`)}
