@@ -5,7 +5,7 @@ export function CarouselCustomNavigation() {
     
   return (
     <Carousel
-      className="top-16 rounded-2xl"
+      className="top-12 md:top-16 rounded-2xl"
       autoplay={true}
       autoplayDelay={5000}
       loop={true}

@@ -10,7 +10,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/input/:platform" element={<InputPage />} />
-        <Route path="/success/platform1" element={<SuccessPagePlatform1 />} />
+        <Route path="/success/gpay" element={<SuccessPagePlatform1 />} />
       </Routes>
     </Router>
   );
