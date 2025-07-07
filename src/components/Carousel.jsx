@@ -26,14 +26,14 @@ export function CarouselCustomNavigation() {
       )}
     >
       <img
-        src="/src/assets/Carousel/buildTrust.webp"
+        src="Carousel/buildTrust.webp"
         alt="image 1"
         className="w-full object-cover"
       />
       <img
-        src="/src/assets/Carousel/increaseSales.webp"
+        src="Carousel/increaseSales.webp"
         alt="image 2"
-        className="w-full object-"
+        className="w-full object-cover"
       />
     </Carousel>
   );
