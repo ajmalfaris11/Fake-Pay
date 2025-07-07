@@ -36,7 +36,7 @@ export function CarouselCustomNavigation() {
       <img
         src={image2}
         alt="image 2"
-        className="w-full object-"
+        className="w-full object-cover"
       />
     </Carousel>
   );
