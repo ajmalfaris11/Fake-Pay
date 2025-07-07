@@ -18,6 +18,7 @@ export default function InputPage() {
     senderBank: "",
     receiverAccount: "Federal Bank",
     googleTransactionId: "",
+    message: "",
   });
 
   function generateUpiId() {
@@ -103,6 +104,21 @@ export default function InputPage() {
               required
             />
           </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Message
+            </label>
+            <input
+              type="text"
+              name="message"
+              value={formData.message}
+              placeholder="Message (optional)"
+              onChange={handleChange}
+              className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-indigo-500"
+            />
+          </div>
+
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">

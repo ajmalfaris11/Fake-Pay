@@ -79,32 +79,39 @@ export default function GpaySuccessPage() {
       <img
         src={ffLogo}
         alt="Fashion Friday"
-        className="w-16 h-16 mb-4 rounded-full mt-10"
+        className="w-[60px] h-[60px] mb-4 rounded-full mt-16"
       />
 
       {/* Merchant name & number */}
       <h1 className="text-lg font-medium text-gray-800">
         To {formData.receiverName || "Fashion Friday"}
       </h1>
-      <p className="text-gray-600 mb-4">+91 75589 69093</p>
+      <p className="text-gray-600 mb-3">+91 75589 69093</p>
 
       {/* Amount */}
-      <div className="mb-2 flex">
-        <span className="font-mukta text-[38px] text-gray-800 mt-2.5">₹</span>
-        <span className="font-inter text-[50px] font-normal text-gray-800">
+      <div className="flex">
+        <span className="font-mukta text-[40px] text-gray-900 mt-2 font-[400]">₹</span>
+        <span className="font-inter text-[50px] font-normal text-gray-900">
           {formData.amount || 999}
         </span>
       </div>
 
+      {formData.message && (
+        <div className="text-center bg-[#f9fafe] rounded-xl px-6 py-2 flex flex-col items-center justify-center my-2">
+          <p className="text-sm text-gray-800">{formData.message}</p>
+        </div>
+      )}
+
+
       {/* Pay again button */}
-      <button className="bg-[#0b57cf] text-white rounded-full px-7 py-2 flex justify-center items-center mb-5 pb-3">
+      <button className="bg-[#0b57cf] text-white rounded-full px-6 py-1.5 flex justify-center items-center mb-5 pb-2.5 mt-4">
         Pay again
       </button>
 
       {/* Status */}
       <div className="flex items-center justify-center gap-2 mb-2">
-        <span className="w-4 h-4 bg-[#1f893d] rounded-full flex justify-center items-center text-white">
-          <span className="material-symbols-outlined text-[18px]">
+        <span className="w-3.5 h-3.5 bg-[#1f893d] rounded-full flex justify-center items-center text-white">
+          <span className="material-symbols-outlined text-[16px]">
             check_small
           </span>
         </span>
@@ -114,7 +121,7 @@ export default function GpaySuccessPage() {
       <hr className="w-48 border-t border-gray-400 mb-3.5" />
 
       {/* Date & Time */}
-      <p className="text-sm text-gray-600 mb-6">
+      <p className="text-sm text-gray-900 mb-8">
         {formatDateTime(formData.dateTime)}
       </p>
 
@@ -122,14 +129,14 @@ export default function GpaySuccessPage() {
       <div className="w-full max-w-md border border-gray-400 rounded-xl shadow-sm">
         <div className="flex items-center justify-between px-4 py-4 border-b border-gray-400">
           <div className="flex items-center gap-2">
-            <div className="w-14 h-10 rounded-md flex items-center justify-center border border-gray-400 p-1">
+            <div className="w-12 h-8 rounded-md flex items-center justify-center border border-gray-400 mr-2">
               <img
                 src={selectedBank.logo}
                 alt={selectedBank.name}
                 className="h-full"
               />
             </div>
-            <span className="text-medium text-gray-800 font-medium">
+            <span className="text-[17px] text-gray-800 font-medium">
               {formData.senderBank} {AccountNo}
             </span>
           </div>
