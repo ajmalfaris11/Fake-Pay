@@ -1,11 +1,9 @@
 import { Carousel } from "@material-tailwind/react";
 
-import image1 from "../assets/Carousel/buildTrust.webp";
-import image2 from "../assets/Carousel/increaseSales.webp";
+import buildTrust from "../assets/Carousel/buildTrust.webp";
+import increaseSales from "../assets/Carousel/increaseSales.webp";
  
 export function CarouselCustomNavigation() {
-
-    
   return (
     <Carousel
       className="top-12 md:top-16 rounded-2xl"
@@ -29,17 +27,13 @@ export function CarouselCustomNavigation() {
       )}
     >
       <img
-        src={image2}
-        alt="image 2"
-        className="w-full object-cover"
-      />
-      <img
-        src={image1}
+        src={buildTrust}
         alt="image 1"
         className="w-full object-cover"
       />
+
       <img
-        src={image2}
+        src={increaseSales}
         alt="image 2"
         className="w-full object-cover"
       />
