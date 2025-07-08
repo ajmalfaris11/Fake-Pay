@@ -122,8 +122,8 @@ export default function PaytmSuccessPage() {
 
                 {/* UPI Ref */}
                 <div className="flex flex-col h-[30%] col">
-                    <p className="text-gray-700 font-[500]">UPI Ref No: <span className='tracking-widest'> {`${formData.upiTransactionId.slice(0, 7)}`} <span className='font-[900] text-gray-900'>{`${formData.upiTransactionId.slice(7)}`}</span> </span></p>
-                    <p className='text-gray-600 text-sm'>07:28 PM, 07 Jul 2025</p>
+                    <p className="text-gray-700 font-[500] text-[16px]">UPI Ref. No: <span className='tracking-widest'> {`${formData.upiTransactionId.slice(0, 7)}`} <span className='font-[900] text-gray-900'>{`${formData.upiTransactionId.slice(7)}`}</span> </span></p>
+                    <p className='text-gray-600 text-md'>{`${formatDateTime(formData.dateTime)}`}</p>
                 </div>
             </div>
 
