@@ -1,5 +1,5 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import paytmLogo from '../assets/Paytm_Logo.png';
 
 import tick from '../assets/paytm_tick.webp';
@@ -9,6 +9,76 @@ import upiGrayLogo from '../assets/upiGrayLogo.webp';
 import hdfcGrayLogo from '../assets/hdfcGrayLogo.webp';
 
 export default function PaytmSuccessPage() {
+    const location = useLocation();
+    const formData = location.state || {};
+
+    const generateAcNo = () => {
+        let number = "";
+        for (let i = 0; i < 4; i++) {
+            number += Math.floor(Math.random() * 10);
+        }
+        return number;
+    };
+
+    const AccountNo = generateAcNo();
+
+    // ✅ Proper reusable format function
+    const formatDateTime = (dateTimeStr) => {
+        if (!dateTimeStr) return "";
+        const date = new Date(dateTimeStr);
+        return date.toLocaleString("en-GB", {
+            timeZone: "Asia/Kolkata",
+            day: "numeric",
+            month: "short",
+            year: "numeric",
+            hour: "numeric",
+            minute: "2-digit",
+            hour12: true,
+        });
+    };
+
+
+    // utils/numberToWords.js
+    function numberToWords(num) {
+        const ones = [
+            '', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine',
+            'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen',
+            'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'
+        ];
+        const tens = [
+            '', '', 'Twenty', 'Thirty', 'Forty', 'Fifty',
+            'Sixty', 'Seventy', 'Eighty', 'Ninety'
+        ];
+
+        if (num === 0) return 'Zero';
+
+        if (num < 20) return ones[num];
+
+        if (num < 100) {
+            return tens[Math.floor(num / 10)] + (num % 10 ? ' ' +  ones[num % 10] : '');
+        }
+
+        if (num < 1000) {
+            return (
+                ones[Math.floor(num / 100)] +
+                ' Hundred' +
+                (num % 100 ? ' ' + numberToWords(num % 100) : '')
+            );
+        }
+
+        if (num < 100000) {
+            return (
+                numberToWords(Math.floor(num / 1000)) +
+                ' Thousand' +
+                (num % 1000 ? ' ' + numberToWords(num % 1000) : '')
+            );
+        }
+
+        return 'Number too large';
+    }
+
+    const amountInWords = numberToWords(formData.amount || 0);
+
     return (
         <div className="min-h-screen flex flex-col items-center justify-start pt-8 font-sans text-black bg-cover bg-center px-3">            {/* Paytm logo */}
             <img src={paytmLogo} alt="Paytm Logo" className='w-[80px] h-auto' />
@@ -17,10 +87,10 @@ export default function PaytmSuccessPage() {
                 <div className='p-8'>
                     <h2 className="text-lg font-semibold mb-4 text-gray-900">Payment Successful</h2>
                     <div className="flex justify-center items-center gap-4 mb-4">
-                        <span className="text-4xl font-bold">₹299</span>
+                        <span className="text-4xl font-bold">{`₹${formData.amount || 0}`}</span>
                         <img src={tick} alt="success" className='w-8 h-8' />
                     </div>
-                    <p className="text-sm text-gray-800 font-[500]">Nine Hundred Ninety Nine Only</p>
+                    <p className="text-sm text-gray-800 font-[500]">{`Rupees ${amountInWords} Only`}</p>
                 </div>
                 <div className="h-2 w-full mt-2 bg-[#03b7f9]"></div>
                 <div className="h-2 w-full bg-[#022975]"></div>
