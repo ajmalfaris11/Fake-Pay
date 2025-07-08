@@ -113,8 +113,8 @@ export default function PaytmSuccessPage() {
                 {/* From */}
                 <div className="flex justify-between items-center mb-2 h-[30%] ">
                     <div>
-                        <p className="font-semibold">From: Salmanul Faris K</p>
-                        <p className="text-sm text-gray-600">State Bank Of India - 7879</p>
+                        <p className="font-[500] text-gray-700">From: <span className="font-semibold text-gray-900 capitalize">{formData.senderName}</span></p>
+                        <p className="text-sm font-[500] text-gray-700">{`${formData.senderBank} - ${AccountNo}`}</p>
                     </div>
                     <div className="bg-blue-200 text-blue-800 w-10 h-10 flex items-center justify-center rounded-full text-md font-bold">
                         SF
