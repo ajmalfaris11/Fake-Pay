@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { data, useLocation } from "react-router-dom";
 import paytmLogo from '../assets/Paytm_Logo.png';
 
 import tick from '../assets/paytm_tick.webp';
@@ -36,6 +36,18 @@ export default function PaytmSuccessPage() {
             hour12: true,
         });
     };
+
+    function getInitials(fullName) {
+        const parts = fullName.trim().split(" ");
+        return {
+            first: parts[0] ? parts[0][0] : "",
+            second: parts[2] ? parts[2][0] : parts[1] ? parts[1][0] : parts[0][1],
+        };
+    }
+
+    const { first:receiverFirst, second:receiverSecond } = getInitials(formData.receiverName);
+    const { first:senderFirst, second:senderSecond } = getInitials(formData.senderName);
+
 
     // numberToWords
     function numberToWords(num) {
@@ -101,11 +113,11 @@ export default function PaytmSuccessPage() {
                 {/* To */}
                 <div className="flex justify-between items-center mb-2 h-[30%]">
                     <div>
-                        <p className="font-[500] text-gray-700">To: <span className="font-semibold text-gray-900">Fashion Friday</span></p>
+                        <p className="font-[500] text-gray-700">To: <span className="font-semibold text-gray-900">{formData.receiverName}</span></p>
                         <p className="text-sm font-[500] text-gray-700">UPI ID: fashionfriday.co@oksbi</p>
                     </div>
-                    <div className="bg-pink-200 text-pink-800 w-10 h-10 flex items-center justify-center rounded-full text-md font-bold">
-                        FF
+                    <div className="bg-pink-200 text-pink-800 w-10 h-10 flex items-center justify-center rounded-full text-md font-bold uppercase">
+                        {receiverFirst}{receiverSecond}
                     </div>
                 </div>
 
@@ -115,8 +127,8 @@ export default function PaytmSuccessPage() {
                         <p className="font-[500] text-gray-700">From: <span className="font-semibold text-gray-900 capitalize">{formData.senderName}</span></p>
                         <p className="text-sm font-[500] text-gray-700">{`${formData.senderBank} - ${AccountNo}`}</p>
                     </div>
-                    <div className="bg-blue-200 text-blue-800 w-10 h-10 flex items-center justify-center rounded-full text-md font-bold">
-                        SF
+                    <div className="bg-blue-200 text-blue-800 w-10 h-10 flex items-center justify-center rounded-full text-md font-bold uppercase">
+                        {senderFirst}{senderSecond}
                     </div>
                 </div>
 
