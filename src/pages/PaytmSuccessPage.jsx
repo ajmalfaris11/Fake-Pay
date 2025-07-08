@@ -85,7 +85,7 @@ export default function PaytmSuccessPage() {
             {/* Blue card */}
             <div className="w-full bg-[#e1f5fe] rounded-t-[14px] text-center mb-4 mt-6 overflow-hidden max-w-sm">
                 <div className='p-8'>
-                    <h2 className="text-lg font-semibold mb-4 text-gray-900">Payment Successful</h2>
+                    <h2 className="text-xl font-semibold mb-4 text-gray-900">Payment Successful</h2>
                     <div className="flex justify-center items-center gap-4 mb-4">
                         <span className="text-4xl font-bold">{`₹${formData.amount || 0}`}</span>
                         <img src={tick} alt="success" className='w-8 h-8' />
@@ -102,8 +102,8 @@ export default function PaytmSuccessPage() {
                 {/* To */}
                 <div className="flex justify-between items-center mb-2 h-[30%]">
                     <div>
-                        <p className="font-semibold">To: Fashion Friday</p>
-                        <p className="text-sm text-gray-600">UPI ID:fashionfriday.co@oksbi</p>
+                        <p className="font-[500] text-gray-700">To: <span className="font-semibold text-gray-900">Fashion Friday</span></p>
+                        <p className="text-sm font-[500] text-gray-700">UPI ID: fashionfriday.co@oksbi</p>
                     </div>
                     <div className="bg-pink-200 text-pink-800 w-10 h-10 flex items-center justify-center rounded-full text-md font-bold">
                         FF
