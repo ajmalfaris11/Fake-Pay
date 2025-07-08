@@ -37,8 +37,7 @@ export default function PaytmSuccessPage() {
         });
     };
 
-
-    // utils/numberToWords.js
+    // numberToWords
     function numberToWords(num) {
         const ones = [
             '', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine',
@@ -55,7 +54,7 @@ export default function PaytmSuccessPage() {
         if (num < 20) return ones[num];
 
         if (num < 100) {
-            return tens[Math.floor(num / 10)] + (num % 10 ? ' ' +  ones[num % 10] : '');
+            return tens[Math.floor(num / 10)] + (num % 10 ? ' ' + ones[num % 10] : '');
         }
 
         if (num < 1000) {
@@ -123,7 +122,7 @@ export default function PaytmSuccessPage() {
 
                 {/* UPI Ref */}
                 <div className="flex flex-col h-[30%] col">
-                    <p>UPI Ref No: <span className='tracking-widest'> 6874603 <span className='font-[700]'>88171</span> </span></p>
+                    <p className="text-gray-700 font-[500]">UPI Ref No: <span className='tracking-widest'> {`${formData.upiTransactionId.slice(0, 7)}`} <span className='font-[900] text-gray-900'>{`${formData.upiTransactionId.slice(7)}`}</span> </span></p>
                     <p className='text-gray-600 text-sm'>07:28 PM, 07 Jul 2025</p>
                 </div>
             </div>
