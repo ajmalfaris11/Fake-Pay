@@ -7,6 +7,7 @@ import paytmDetailsSection from '../assets/paytm_detail_section.png';
 import paytmGrayLogo from '../assets/paytmGrayLogo.webp';
 import upiGrayLogo from '../assets/upiGrayLogo.webp';
 import hdfcGrayLogo from '../assets/hdfcGrayLogo.webp';
+import { amtFormate } from "../utils/helpers";
 
 export default function PaytmSuccessPage() {
     const location = useLocation();
@@ -98,7 +99,7 @@ export default function PaytmSuccessPage() {
                 <div className='p-8'>
                     <h2 className="text-xl font-semibold mb-4 text-gray-900">Payment Successful</h2>
                     <div className="flex justify-center items-center gap-4 mb-4">
-                        <span className="text-4xl font-bold">{`₹${formData.amount || 0}`}</span>
+                        <span className="text-4xl font-bold">{`₹${amtFormate(formData.amount) || 0}`}</span>
                         <img src={tick} alt="success" className='w-8 h-8' />
                     </div>
                     <p className="text-sm text-gray-800 font-[500]">{`Rupees ${amountInWords} Only`}</p>
