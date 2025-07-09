@@ -117,7 +117,7 @@ export default function PaytmSuccessPage() {
                         <p className="font-[410] text-gray-700 text-lg">To: <span className="font-semibold text-gray-900">{formData.receiverName}</span></p>
                         <p className="text-md font-[410] text-gray-700">UPI ID: fashionfriday.co@oksbi</p>
                     </div>
-                    <div className="bg-pink-200 text-pink-800 w-10 h-10 flex items-center justify-center rounded-full text-md font-bold uppercase">
+                    <div className="bg-pink-200 text-pink-800 w-10 h-10 flex items-center justify-center rounded-full text-lg font-bold uppercase">
                         {receiverFirst}{receiverSecond}
                     </div>
                 </div>
@@ -128,7 +128,7 @@ export default function PaytmSuccessPage() {
                         <p className="font-[410] text-gray-700 text-lg">From: <span className="font-semibold text-gray-900 capitalize">{formData.senderName}</span></p>
                         <p className="text-md font-[410] text-gray-700">{`${formData.senderBank} - ${AccountNo}`}</p>
                     </div>
-                    <div className="bg-blue-200 text-blue-800 w-10 h-10 flex items-center justify-center rounded-full text-md font-bold uppercase">
+                    <div className="bg-blue-200 text-blue-800 w-10 h-10 flex items-center justify-center rounded-full text-lg font-bold uppercase">
                         {senderFirst}{senderSecond}
                     </div>
                 </div>
