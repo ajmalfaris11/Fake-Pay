@@ -97,12 +97,12 @@ export default function PaytmSuccessPage() {
             {/* Blue card */}
             <div className="w-full bg-[#e1f5fe] rounded-t-[14px] text-center mb-4 mt-6 overflow-hidden max-w-sm">
                 <div className='p-8'>
-                    <h2 className="text-xl font-semibold mb-4 text-gray-900">Payment Successful</h2>
+                    <h2 className="text-2xl font-semibold mb-4 text-gray-900">Payment Successful</h2>
                     <div className="flex justify-center items-center gap-4 mb-4">
                         <span className="text-4xl font-bold">{`₹${amtFormate(formData.amount) || 0}`}</span>
                         <img src={tick} alt="success" className='w-8 h-8' />
                     </div>
-                    <p className="text-sm text-gray-800 font-[500]">{`Rupees ${amountInWords} Only`}</p>
+                    <p className="text-sm text-gray-800 font-[410]">{`Rupees ${amountInWords} Only`}</p>
                 </div>
                 <div className="h-2 w-full mt-2 bg-[#03b7f9]"></div>
                 <div className="h-2 w-full bg-[#022975]"></div>
@@ -114,8 +114,8 @@ export default function PaytmSuccessPage() {
                 {/* To */}
                 <div className="flex justify-between items-center mb-2 h-[30%]">
                     <div>
-                        <p className="font-[500] text-gray-700">To: <span className="font-semibold text-gray-900">{formData.receiverName}</span></p>
-                        <p className="text-sm font-[500] text-gray-700">UPI ID: fashionfriday.co@oksbi</p>
+                        <p className="font-[410] text-gray-700 text-lg">To: <span className="font-semibold text-gray-900">{formData.receiverName}</span></p>
+                        <p className="text-md font-[410] text-gray-700">UPI ID: fashionfriday.co@oksbi</p>
                     </div>
                     <div className="bg-pink-200 text-pink-800 w-10 h-10 flex items-center justify-center rounded-full text-md font-bold uppercase">
                         {receiverFirst}{receiverSecond}
@@ -125,8 +125,8 @@ export default function PaytmSuccessPage() {
                 {/* From */}
                 <div className="flex justify-between items-center mb-2 h-[30%] ">
                     <div>
-                        <p className="font-[500] text-gray-700">From: <span className="font-semibold text-gray-900 capitalize">{formData.senderName}</span></p>
-                        <p className="text-sm font-[500] text-gray-700">{`${formData.senderBank} - ${AccountNo}`}</p>
+                        <p className="font-[410] text-gray-700 text-lg">From: <span className="font-semibold text-gray-900 capitalize">{formData.senderName}</span></p>
+                        <p className="text-md font-[410] text-gray-700">{`${formData.senderBank} - ${AccountNo}`}</p>
                     </div>
                     <div className="bg-blue-200 text-blue-800 w-10 h-10 flex items-center justify-center rounded-full text-md font-bold uppercase">
                         {senderFirst}{senderSecond}
@@ -135,7 +135,7 @@ export default function PaytmSuccessPage() {
 
                 {/* UPI Ref */}
                 <div className="flex flex-col h-[30%] col">
-                    <p className="text-gray-700 font-[500] text-[16px]">UPI Ref. No: <span className='tracking-widest'> {`${formData.upiTransactionId.slice(0, 7)}`} <span className='font-[900] text-gray-900'>{`${formData.upiTransactionId.slice(7)}`}</span> </span></p>
+                    <p className="text-gray-700 font-[410] text-[16px] text-l">UPI Ref. No: <span className='tracking-widest'> {`${formData.upiTransactionId.slice(0, 7)}`} <span className='font-[900] text-gray-900'>{`${formData.upiTransactionId.slice(7)}`}</span> </span></p>
                     <p className='text-gray-600 text-md'>{`${formatDateTime(formData.dateTime)}`}</p>
                 </div>
             </div>
