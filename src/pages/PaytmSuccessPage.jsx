@@ -45,8 +45,8 @@ export default function PaytmSuccessPage() {
         };
     }
 
-    const { first:receiverFirst, second:receiverSecond } = getInitials(formData.receiverName);
-    const { first:senderFirst, second:senderSecond } = getInitials(formData.senderName);
+    const { first: receiverFirst, second: receiverSecond } = getInitials(formData.receiverName);
+    const { first: senderFirst, second: senderSecond } = getInitials(formData.senderName);
 
 
     // numberToWords
