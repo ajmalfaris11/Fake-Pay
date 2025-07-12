@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { bankList } from "../data/bankList";
 
+import { amtFormate } from "../utils/helpers";
+
 import ffLogo from "../assets/ffLogo.webp";
 import upiLogo from "../assets/upiLogo.webp";
 
@@ -92,7 +94,7 @@ export default function GpaySuccessPage() {
       <div className="flex">
         <span className="font-mukta text-[40px] text-gray-900 mt-2 font-[400]">₹</span>
         <span className="font-inter text-[50px] font-normal text-gray-900">
-          {formData.amount || 999}
+          {amtFormate(formData.amount) || 999}
         </span>
       </div>
 
