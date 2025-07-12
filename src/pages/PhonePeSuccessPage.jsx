@@ -39,7 +39,7 @@ export default function PaymentSuccessScreen() {
                     </div>
 
                     <div className="flex items-center mt-2 border-t-[1px] border-gray-800 pt-4 justify-between">
-                        <button className="flex items-center text-sm text-white gap-4 border-r-[1px] border-gray-800 w-[50%]">
+                        <button className="flex items-center text-sm text-white gap-2 border-r-[1px] border-gray-800 w-[50%]">
                             <div className="bg-[#853cd8] bg-opacity-30 p-3 rounded-full w-[45px] h-[45px] flex items-center justify-center text-[#853cd8]">
                                 <span class="material-symbols-outlined">
                                     article
@@ -47,7 +47,7 @@ export default function PaymentSuccessScreen() {
                             </div>
                             <p className='text-xs'>View Details</p>
                         </button>
-                        <button className="flex items-center text-sm text-white gap-4 w-[50%] pl-3">
+                        <button className="flex items-center text-sm text-white gap-3 w-[50%] pl-4">
                             <div className="bg-[#853cd8] bg-opacity-30 p-3 rounded-full w-[45px] h-[45px] flex items-center justify-center text-[#853cd8]">
                                 <span class="material-symbols-outlined">
                                     share
