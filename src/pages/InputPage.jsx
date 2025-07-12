@@ -50,9 +50,14 @@ export default function InputPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Add current date & time when form is submitted
+    const currentDateTime = new Date().toISOString();
+
     const updatedFormData = {
       ...formData,
       upiTransactionId: generateUpiId(),
+      dateTime: currentDateTime,
       googleTransactionId: generateTransactionId(),
     };
     setFormData(updatedFormData);
@@ -120,7 +125,7 @@ export default function InputPage() {
           </div>
 
 
-          <div>
+          {/* <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Date & Time
             </label>
@@ -132,7 +137,7 @@ export default function InputPage() {
               className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-indigo-500"
               required
             />
-          </div>
+          </div> */}
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
