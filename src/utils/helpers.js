@@ -3,7 +3,7 @@ export function amtFormate(amount) {
   return Number(amount || 0).toLocaleString('en-IN');
 }
 
-    function formatDateTime (dateTimeStr){
+export default function formatDateTime (dateTimeStr){
         if (!dateTimeStr) return "";
         const date = new Date(dateTimeStr);
         return date.toLocaleString("en-GB", {
