@@ -16,3 +16,11 @@ export default function formatDateTime (dateTimeStr){
             hour12: true,
         });
     };
+
+export function generateAcNo () {
+    let number = "";
+    for (let i = 0; i < 4; i++) {
+      number += Math.floor(Math.random() * 10);
+    }
+    return number;
+  };

@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import { bankList } from "../data/bankList";
 
 import { amtFormate } from "../utils/helpers";
+import { generateAcNo } from "../utils/helpers";
 
 import ffLogo from "../assets/ffLogo.webp";
 import upiLogo from "../assets/upiLogo.webp";
@@ -36,16 +37,6 @@ export default function GpaySuccessPage() {
   const selectedBank = bankList.find(
     (bank) => bank.name === formData.senderBank
   );
-
-  const generateAcNo = () => {
-    let number = "";
-    for (let i = 0; i < 4; i++) {
-      number += Math.floor(Math.random() * 10);
-    }
-    return number;
-  };
-
-  const AccountNo = generateAcNo();
 
 
 
@@ -139,7 +130,7 @@ export default function GpaySuccessPage() {
               />
             </div>
             <span className="text-[17px] text-gray-800 font-medium">
-              {formData.senderBank} {AccountNo}
+              {formData.senderBank} {generateAcNo()}
             </span>
           </div>
           <span className="text-gray-700 flex justify-center items-center">
