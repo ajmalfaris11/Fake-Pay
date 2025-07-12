@@ -18,7 +18,7 @@ export default function PaymentSuccessScreen() {
             </div>
 
             {/* User Info Card */}
-            <div className="w-full p-2 absolute top-[22vh]">
+            <div className="w-full p-2 absolute top-[23vh]">
                 <div className="w-full bg-[#191919] rounded-xl p-6 flex flex-col space-y-4 mb-4 ">
                     <div className="flex flex-col items-center justify-between">
                         <div className="flex items-start justify-start w-full ">
