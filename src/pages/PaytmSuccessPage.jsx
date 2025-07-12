@@ -10,6 +10,7 @@ import hdfcGrayLogo from '../assets/hdfcGrayLogo.webp';
 import { amtFormate } from "../utils/helpers";
 import formatDateTime from "../utils/helpers";
 import generateAcNo from "../utils/helpers";
+import amountInWords from "../utils/amoutInWords";
 
 export default function PaytmSuccessPage() {
     const location = useLocation();
@@ -26,48 +27,6 @@ export default function PaytmSuccessPage() {
     const { first: receiverFirst, second: receiverSecond } = getInitials(formData.receiverName);
     const { first: senderFirst, second: senderSecond } = getInitials(formData.senderName);
 
-
-    // numberToWords
-    function numberToWords(num) {
-        const ones = [
-            '', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine',
-            'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen',
-            'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'
-        ];
-        const tens = [
-            '', '', 'Twenty', 'Thirty', 'Forty', 'Fifty',
-            'Sixty', 'Seventy', 'Eighty', 'Ninety'
-        ];
-
-        if (num === 0) return 'Zero';
-
-        if (num < 20) return ones[num];
-
-        if (num < 100) {
-            return tens[Math.floor(num / 10)] + (num % 10 ? ' ' + ones[num % 10] : '');
-        }
-
-        if (num < 1000) {
-            return (
-                ones[Math.floor(num / 100)] +
-                ' Hundred' +
-                (num % 100 ? ' ' + numberToWords(num % 100) : '')
-            );
-        }
-
-        if (num < 100000) {
-            return (
-                numberToWords(Math.floor(num / 1000)) +
-                ' Thousand' +
-                (num % 1000 ? ' ' + numberToWords(num % 1000) : '')
-            );
-        }
-
-        return 'Number too large';
-    }
-
-    const amountInWords = numberToWords(formData.amount || 0);
-
     return (
         <div className="min-h-screen flex flex-col items-center justify-start pt-8 font-sans text-black bg-cover bg-center px-3">            {/* Paytm logo */}
             <img src={paytmLogo} alt="Paytm Logo" className='w-[80px] h-auto' />
@@ -79,7 +38,7 @@ export default function PaytmSuccessPage() {
                         <span className="text-4xl font-bold">{`₹${amtFormate(formData.amount) || 0}`}</span>
                         <img src={tick} alt="success" className='w-8 h-8' />
                     </div>
-                    <p className="text-sm text-gray-800 font-[410]">{`Rupees ${amountInWords} Only`}</p>
+                    <p className="text-sm text-gray-800 font-[410]">{`Rupees ${amountInWords(formData.amount || 0)} Only`}</p>
                 </div>
                 <div className="h-2 w-full mt-2 bg-[#03b7f9]"></div>
                 <div className="h-2 w-full bg-[#022975]"></div>
