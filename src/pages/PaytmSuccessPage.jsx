@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { data, useLocation } from "react-router-dom";
-import paytmLogo from '../assets/Paytm_Logo.png';
 
+import paytmLogo from '../assets/Paytm_Logo.png';
 import tick from '../assets/paytm_tick.webp';
 import paytmDetailsSection from '../assets/paytm_detail_section.png';
 import paytmGrayLogo from '../assets/paytmGrayLogo.webp';
