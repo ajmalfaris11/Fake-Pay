@@ -10,7 +10,7 @@ import {formatDateTime} from "../utils/helpers";
 import ffLogo from "../assets/ffLogo.webp";
 import upiLogo from "../assets/upiLogo.webp";
 
-export default function GpaySuccessPage() {
+export default function GpayReceiptPage() {
 
   const location = useLocation();
   const formData = location.state || {};
