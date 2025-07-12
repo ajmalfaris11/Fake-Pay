@@ -3,7 +3,7 @@ import { data, useLocation } from "react-router-dom";
 
 
 import upiLogo from '../assets/upiLogo.webp';
-import formatDateTime from '../utils/helpers.js';
+import {formatDateTime} from '../utils/helpers.js';
 import { amtFormate } from "../utils/helpers";
 
 
@@ -20,7 +20,7 @@ export default function PaymentSuccessScreen() {
             <div className="w-full bg-[#28A745] text-center pt-5 h-[40vh] relative flex flex-col items-center ">
                 <div className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center items-center mb-4">
                     <div className="w-14 h-14 bg-white  rounded-full flex items-center justify-center">
-                        <span class="material-symbols-outlined text-[#28A745] text-5xl font-bold">
+                        <span className="material-symbols-outlined text-[#28A745] text-5xl font-bold">
                             check
                         </span>
                     </div>
@@ -53,7 +53,7 @@ export default function PaymentSuccessScreen() {
                     <div className="flex items-center mt-2 border-t-[1px] border-gray-800 pt-4 justify-between">
                         <button className="flex items-center text-sm text-white gap-3 border-r-[1px] border-gray-800 w-[50%]">
                             <div className="bg-[#853cd8] bg-opacity-30 p-2 rounded-full w-[45px] h-[45px] flex items-center justify-center text-[#853cd8]">
-                                <span class="material-symbols-outlined">
+                                <span className="material-symbols-outlined">
                                     article
                                 </span>
                             </div>
@@ -61,7 +61,7 @@ export default function PaymentSuccessScreen() {
                         </button>
                         <button className="flex items-center text-sm text-white gap-3 w-[50%] pl-4">
                             <div className="bg-[#853cd8] bg-opacity-30 p-2 rounded-full w-[45px] h-[45px] flex items-center justify-center text-[#853cd8]">
-                                <span class="material-symbols-outlined">
+                                <span className="material-symbols-outlined">
                                     share
                                 </span>
                             </div>

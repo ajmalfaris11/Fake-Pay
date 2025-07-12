@@ -5,7 +5,7 @@ import { bankList } from "../data/bankList";
 
 import { amtFormate } from "../utils/helpers";
 import { generateAcNo } from "../utils/helpers";
-import formatDateTime from "../utils/helpers";
+import {formatDateTime} from "../utils/helpers";
 
 import ffLogo from "../assets/ffLogo.webp";
 import upiLogo from "../assets/upiLogo.webp";

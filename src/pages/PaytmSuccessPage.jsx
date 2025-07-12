@@ -8,8 +8,8 @@ import paytmGrayLogo from '../assets/paytmGrayLogo.webp';
 import upiGrayLogo from '../assets/upiGrayLogo.webp';
 import hdfcGrayLogo from '../assets/hdfcGrayLogo.webp';
 import { amtFormate } from "../utils/helpers";
-import formatDateTime from "../utils/helpers";
-import generateAcNo from "../utils/helpers";
+import {formatDateTime} from "../utils/helpers";
+import {generateAcNo} from "../utils/helpers";
 import amountInWords from "../utils/amoutInWords";
 import getInitials from "../utils/getFirstLetter";
 
@@ -55,7 +55,7 @@ export default function PaytmSuccessPage() {
                 <div className="flex justify-between items-center mb-2 h-[30%] ">
                     <div>
                         <p className="font-[410] text-gray-700 text-lg">From: <span className="font-semibold text-gray-900 capitalize">{formData.senderName}</span></p>
-                        <p className="text-md font-[410] text-gray-700">{`${formData.senderBank} - ${AccountNo()}`}</p>
+                        <p className="text-md font-[410] text-gray-700">{`${formData.senderBank} - ${generateAcNo()}`}</p>
                     </div>
                     <div className="bg-blue-200 text-blue-800 w-10 h-10 flex items-center justify-center rounded-full text-lg font-bold uppercase">
                         {senderFirst}{senderSecond}
