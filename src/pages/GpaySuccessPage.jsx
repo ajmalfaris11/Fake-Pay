@@ -5,6 +5,7 @@ import { bankList } from "../data/bankList";
 
 import { amtFormate } from "../utils/helpers";
 import { generateAcNo } from "../utils/helpers";
+import formatDateTime from "../utils/helpers";
 
 import ffLogo from "../assets/ffLogo.webp";
 import upiLogo from "../assets/upiLogo.webp";
@@ -38,22 +39,6 @@ export default function GpaySuccessPage() {
     (bank) => bank.name === formData.senderBank
   );
 
-
-
-  // ✅ Proper reusable format function
-  const formatDateTime = (dateTimeStr) => {
-    if (!dateTimeStr) return "";
-    const date = new Date(dateTimeStr);
-    return date.toLocaleString("en-GB", {
-      timeZone: "Asia/Kolkata", // adjust as needed
-      day: "numeric",
-      month: "short",
-      year: "numeric",
-      hour: "numeric",
-      minute: "2-digit",
-      hour12: true,
-    });
-  };
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-start bg-white text-center px-4 font-sans">
