@@ -4,7 +4,7 @@ import HomePage from "./pages/HomePage";
 import InputPage from "./pages/InputPage";
 import SuccessPagePlatform1 from "./pages/GpaySuccessPage";
 import PaytmSuccessPage from "./pages/PaytmSuccessPage";
-import PhonePeSuccessPage from "./pages/phonePeSuccessPage";
+import PhonePeSuccessPage from "./pages/PhonePeSuccessPage";
 
 export default function App() {
   return (
