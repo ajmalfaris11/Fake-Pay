@@ -5,7 +5,7 @@ export default function PaymentSuccessScreen() {
     return (
         <div className="max-w-sm min-h-screen bg-[#262626] text-white font-sans flex flex-col items-center relative">
             {/* Header */}
-            <div className="w-full bg-[#28A745] text-center pt-5 h-[42vh] relative flex flex-col items-center ">
+            <div className="w-full bg-[#28A745] text-center pt-5 h-[40vh] relative flex flex-col items-center ">
                 <div className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center items-center mb-4">
                     <div className="w-14 h-14 bg-white  rounded-full flex items-center justify-center">
                         <span class="material-symbols-outlined text-[#28A745] text-5xl font-bold">
@@ -18,7 +18,7 @@ export default function PaymentSuccessScreen() {
             </div>
 
             {/* User Info Card */}
-            <div className="w-full p-2 absolute top-[23.5vh]">
+            <div className="w-full p-2 absolute top-[22vh]">
                 <div className="w-full bg-[#191919] rounded-xl p-6 flex flex-col space-y-4 mb-4 ">
                     <div className="flex flex-col items-center justify-between">
                         <div className="flex items-start justify-start w-full ">
