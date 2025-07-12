@@ -8,6 +8,7 @@ import paytmGrayLogo from '../assets/paytmGrayLogo.webp';
 import upiGrayLogo from '../assets/upiGrayLogo.webp';
 import hdfcGrayLogo from '../assets/hdfcGrayLogo.webp';
 import { amtFormate } from "../utils/helpers";
+import formatDateTime from "../utils/helpers";
 
 export default function PaytmSuccessPage() {
     const location = useLocation();
@@ -23,20 +24,6 @@ export default function PaytmSuccessPage() {
 
     const AccountNo = generateAcNo();
 
-    // ✅ Proper reusable format function
-    const formatDateTime = (dateTimeStr) => {
-        if (!dateTimeStr) return "";
-        const date = new Date(dateTimeStr);
-        return date.toLocaleString("en-GB", {
-            timeZone: "Asia/Kolkata",
-            day: "numeric",
-            month: "short",
-            year: "numeric",
-            hour: "numeric",
-            minute: "2-digit",
-            hour12: true,
-        });
-    };
 
     function getInitials(fullName) {
         const parts = fullName.trim().split(" ");
