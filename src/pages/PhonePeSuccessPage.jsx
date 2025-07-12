@@ -18,7 +18,7 @@ export default function PaymentSuccessScreen() {
             </div>
 
             {/* User Info Card */}
-            <div className="w-full p-2 absolute top-[23vh]">
+            <div className="w-full p-2 absolute top-[22.5vh]">
                 <div className="w-full bg-[#191919] rounded-xl p-6 flex flex-col space-y-4 mb-4 ">
                     <div className="flex flex-col items-center justify-between">
                         <div className="flex items-start justify-start w-full ">
@@ -39,21 +39,21 @@ export default function PaymentSuccessScreen() {
                     </div>
 
                     <div className="flex items-center mt-2 border-t-[1px] border-gray-800 pt-4 justify-between">
-                        <button className="flex items-center text-sm text-white gap-2 border-r-[1px] border-gray-800 w-[50%]">
+                        <button className="flex items-center text-sm text-white gap-4 border-r-[1px] border-gray-800 w-[50%]">
                             <div className="bg-[#853cd8] bg-opacity-30 p-3 rounded-full w-[45px] h-[45px] flex items-center justify-center text-[#853cd8]">
                                 <span class="material-symbols-outlined">
                                     article
                                 </span>
                             </div>
-                            View Details
+                            <p className='text-xs'>View Details</p>
                         </button>
-                        <button className="flex items-center text-sm text-white gap-2 w-[50%] pl-2">
+                        <button className="flex items-center text-sm text-white gap-4 w-[50%] pl-3">
                             <div className="bg-[#853cd8] bg-opacity-30 p-3 rounded-full w-[45px] h-[45px] flex items-center justify-center text-[#853cd8]">
                                 <span class="material-symbols-outlined">
                                     share
                                 </span>
                             </div>
-                            Share Receipt
+                            <p className='text-xs'>Share Receipt</p>
                         </button>
                     </div>
                 </div>
