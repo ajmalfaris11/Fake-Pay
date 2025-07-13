@@ -4,7 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { bankList } from "../data/bankList";
 
 export default function InputPage() {
-  const { platform } = useParams();
+  const { platform, option } = useParams();
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -61,7 +61,7 @@ export default function InputPage() {
       googleTransactionId: generateTransactionId(),
     };
     setFormData(updatedFormData);
-    navigate(`/success/${platform}`, { state: updatedFormData });
+    navigate(`/${platform}/${option}/page`, { state: updatedFormData });
   };
 
   return (

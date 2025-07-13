@@ -6,17 +6,20 @@ import GpayReceiptPage from "./pages/GpayReceiptPage";
 import PaytmSuccessPage from "./pages/PaytmSuccessPage";
 import PhonePeSuccessPage from "./pages/PhonePeSuccessPage";
 import GpaySuccessPage from "./pages/GpaySuccessPage";
+import SelectScreenshotType from "./pages/SelectScreenshotType";
+
 
 export default function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/input/:platform" element={<InputPage />} />
-        <Route path="/success/gpay" element={<GpayReceiptPage />} />
-        <Route path="/success/paytm" element={<PaytmSuccessPage />} />
-        <Route path="/success/phonepe" element={<PhonePeSuccessPage />} />
-        <Route path="/success/gpaySuccess" element={<GpaySuccessPage />} />
+        <Route path="/:platform/option" element={<SelectScreenshotType />} />
+        <Route path="/:platform/:option/input" element={<InputPage />} />
+        <Route path="/gpay/success/page" element={<GpaySuccessPage />} />
+        <Route path="/gpay/receipt/page" element={<GpayReceiptPage />} />
+        <Route path="/paytm/success/page" element={<PaytmSuccessPage />} />
+        <Route path="/phonepe/success/page" element={<PhonePeSuccessPage />} />
       </Routes>
     </Router>
   );

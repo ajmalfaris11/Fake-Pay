@@ -37,13 +37,7 @@ export default function HomePage() {
       description: "Create with Amazon Pay",
       logo: amazonPayIcon,
       platform: "amazonpay",
-    },
-    {
-      name: "Google Pay",
-      description: "Create with Google Pay Success View",
-      logo: gpayIcon,
-      platform: "gpaySuccess",
-    },
+    }
   ];
 
   return (
@@ -57,7 +51,7 @@ export default function HomePage() {
           <PlatformCard
             key={idx}
             platform={platform}
-            onClick={() => navigate(`/input/${platform.platform.toLowerCase()}`)}
+            onClick={() => navigate(`/${platform.platform.toLowerCase()}/option`)}
           />
         ))}
       </div>
