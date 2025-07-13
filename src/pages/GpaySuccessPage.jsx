@@ -3,6 +3,8 @@ import { data, useLocation } from "react-router-dom";
 import { formatDateTime } from "../utils/helpers";
 import { amtFormate } from "../utils/helpers";
 
+import secureIcon from "../assets/secureicon.webp"
+
 export default function GpaySuccessPage() {
 
     const location = useLocation();
@@ -39,8 +41,11 @@ export default function GpaySuccessPage() {
             </div>
 
             {/* PhonePe VPA */}
-            <div className="text-[14px] text-gray-400">
-                Gpay • fashionfriday.co@oksbi
+            <div className="text-[14px] text-gray-400 flex justify-center item-cente gap-1">
+
+                <img src={secureIcon} alt="secure" className='w-4 h-4 mt-[2px]' />
+
+                {`Banking name: AJMAL FARIS K`}
             </div>
 
             {/* Date and time */}
