@@ -6,6 +6,7 @@ module.exports = withMT({
     "./index.html",
     "./src/**/*.{js,jsx,ts,tsx,vue}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
