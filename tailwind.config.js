@@ -16,6 +16,9 @@ module.exports = withMT({
         noto: ['"Noto Sans Display"', 'sans-serif'],
         opensans: ['"Open Sans"', 'sans-serif'],
       },
+      boxShadow: {
+        'around-md': '0 0 10px 0 rgba(0, 0, 0, 0.1)',
+      },
     },
   },
   plugins: [],

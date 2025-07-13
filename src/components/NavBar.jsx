@@ -17,7 +17,7 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="bg-[#1e40af] p-4 text-white text-center w-full flex justify-between items-center fixed top-0 z-50 px-4">
+    <nav className="bg-[#1e40af] p-4 text-white text-center w-full flex justify-between items-center fixed top-0 z-50 px-4 shadow-xl">
       <span className="material-symbols-outlined">
         sort
       </span>

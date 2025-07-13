@@ -8,21 +8,21 @@ export default function SelectScreenshotType() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black text-black flex flex-col items-center justify-center px-4 font-sans">
+    <div className="min-h-screen w-full bg-white dark:bg-black text-black flex flex-col items-center justify-center px-4 font-sans">
       <NavBar />
-      <div className="text-center mb-14">
-        <h1 className="text-4xl font-extrabold uppercase text-center text-[#1e40af] dark:text-white">
-          Select Screenshot Type
+      <div className="w-full text-center shadow-md rounded-2xl mb-14">
+        <h1 className="text-4xl font-extrabold uppercase text-center text-[#1e40af] dark:text-white p-2">
+          Select <br /> Screenshot Type
         </h1>
         <p className="mb-8 dark:text-gray-500">Choose what you want to create.</p>
       </div>
 
       <button
-        className="w-full bg-[#1e40af] text-white p-4 rounded-2xl mb-4 flex items-center justify-between text-xl font-bold"
+        className="w-full bg-white dark:bg-gray-900 text-[#1e40af] dark:text-white p-4 rounded-2xl mb-4 flex items-center justify-between text-xl font-bold shadow-around-md"
         onClick={() => navigate(`/${platform}/success/input`)}
       >
-        <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center">
-          <span className="material-symbols-outlined text-[#1e40af] text-5xl">
+        <div className="w-20 h-20 rounded-2xl bg-white dark:bg-black flex items-center justify-center ">
+          <span className="material-symbols-outlined text-5xl shadow-around-md p-4 rounded-full ">
             check_circle
           </span>
         </div>
@@ -32,15 +32,15 @@ export default function SelectScreenshotType() {
       </button>
 
       <button
-        className="w-full bg-[#1e40af] text-white p-4 rounded-2xl mb-4 flex items-center justify-between text-xl font-bold"
+        className="w-full bg-white dark:bg-gray-900 text-[#1e40af] dark:text-white p-4 rounded-2xl mb-4 flex items-center justify-between text-xl font-bold shadow-around-md"
         onClick={() => navigate(`/${platform}/receipt/input`)}
       >
-        <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center">
-          <span className="material-symbols-outlined text-[#1e40af] text-5xl">
+        <div className="w-20 h-20 rounded-2xl bg-white dark:bg-black flex items-center justify-center ">
+          <span className="material-symbols-outlined text-5xl shadow-around-md p-4 rounded-full ">
             receipt
           </span>
         </div>
-        <p className="w-4/5">Receipt Page Screenshot</p>
+        <p className="w-4/5 ">Receipt Page Screenshot</p>
       </button>
     </div>
   );
