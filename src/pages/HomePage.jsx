@@ -41,7 +41,7 @@ export default function HomePage() {
   ];
 
   return (
-    <div>
+    <div className="dark:bg-black">
       <NavBar />
       <div className="p-2">
         <CarouselCustomNavigation />
