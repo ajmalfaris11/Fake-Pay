@@ -65,23 +65,23 @@ export default function InputPage() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-gray-50 flex flex-col items-center">
+    <div className="min-h-screen w-full bg-gray-50 dark:bg-black flex flex-col items-center ">
       <NavBar />
 
       <div className="mt-20 w-full max-w-2xl px-3">
-        <h2 className="text-center text-3xl font-bold text-gray-900 mb-2">
+        <h2 className="text-center text-3xl font-bold dark:text-white text-gray-900 mb-2">
           Enter Payment Details
         </h2>
-        <p className="text-center text-gray-500 mb-6">
+        <p className="text-center dark:text-gray-400 text-gray-500 mb-6">
           Complete the form to generate your {platform} payment success page.
         </p>
 
         <form
           onSubmit={handleSubmit}
-          className="bg-white rounded-xl shadow-md p-6 grid grid-cols-1 md:grid-cols-2 gap-6"
+          className="bg-white rounded-xl shadow-md p-6 grid grid-cols-1 md:grid-cols-2 gap-6 dark:bg-gray-900"
         >
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-600 mb-1">
               Sender Name
             </label>
             <input
@@ -90,13 +90,13 @@ export default function InputPage() {
               value={formData.senderName}
               placeholder="Enter your name"
               onChange={handleChange}
-              className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-indigo-500"
+              className="border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-blue-500 bg-black"
               required
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-600 mb-1">
               Amount (₹)
             </label>
             <input
@@ -105,13 +105,13 @@ export default function InputPage() {
               value={formData.amount}
               placeholder="Payment amount"
               onChange={handleChange}
-              className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-indigo-500"
+              className="border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-indigo-500 bg-black"
               required
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-600 mb-1">
               Message
             </label>
             <input
@@ -120,13 +120,13 @@ export default function InputPage() {
               value={formData.message}
               placeholder="Message (optional)"
               onChange={handleChange}
-              className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-indigo-500"
+              className="border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-indigo-500 bg-black"
             />
           </div>
 
 
           {/* <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-600 mb-1">
               Date & Time
             </label>
             <input
@@ -134,20 +134,20 @@ export default function InputPage() {
               name="dateTime"
               value={formData.dateTime}
               onChange={handleChange}
-              className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-indigo-500"
+              className="border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-indigo-500 bg-black"
               required
             />
           </div> */}
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
               Sender Bank
             </label>
             <select
               name="senderBank"
               value={formData.senderBank}
               onChange={handleChange}
-              className="border border-gray-300 rounded-lg px-4 py-2 w-full bg-white text-gray-700 focus:ring-2 focus:ring-indigo-500"
+              className="border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 w-full bg-white dark:bg-black text-gray-700 dark:text-gray-200 focus:ring-2 focus:ring-indigo-500"
               required
             >
               <option value="">-- Select Bank --</option>
@@ -158,6 +158,7 @@ export default function InputPage() {
               ))}
             </select>
           </div>
+
 
           <button
             type="submit"
