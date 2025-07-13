@@ -8,13 +8,13 @@ export default function SelectScreenshotType() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-white text-black flex flex-col items-center justify-center px-4 font-sans">
+    <div className="min-h-screen bg-white dark:bg-black text-black flex flex-col items-center justify-center px-4 font-sans">
       <NavBar />
       <div className="text-center mb-14">
-        <h1 className="text-4xl font-extrabold uppercase text-center text-[#1e40af]">
+        <h1 className="text-4xl font-extrabold uppercase text-center text-[#1e40af] dark:text-white">
           Select Screenshot Type
         </h1>
-        <p className="mb-8">Choose what you want to create.</p>
+        <p className="mb-8 dark:text-gray-500">Choose what you want to create.</p>
       </div>
 
       <button
