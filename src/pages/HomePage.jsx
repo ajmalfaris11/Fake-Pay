@@ -38,6 +38,12 @@ export default function HomePage() {
       logo: amazonPayIcon,
       platform: "amazonpay",
     },
+    {
+      name: "Google Pay",
+      description: "Create with Google Pay Success View",
+      logo: gpayIcon,
+      platform: "gpaySuccess",
+    },
   ];
 
   return (
