@@ -43,7 +43,7 @@ export default function GpaySuccessPage() {
             {/* PhonePe VPA */}
             <div className="text-[14px] text-gray-400 flex justify-center item-cente gap-1">
 
-                <img src={secureIcon} alt="secure" className='w-4 h-4 mt-[2px]' />
+                <img src={secureIcon} alt="secure" className='w-5 h-5' />
 
                 {`Banking name: AJMAL FARIS K`}
             </div>
