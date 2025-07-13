@@ -82,7 +82,7 @@ export default function GpayReceiptPage() {
 
 
       {/* Pay again button */}
-      <button className="bg-[#0b57cf] dark:bg-[#7ca2ee] text-white dark:text-[#0b2353] rounded-full px-6 py-1.5 flex justify-center items-center mb-5 pb-2.5 mt-4">
+      <button className="bg-[#0b57cf] dark:bg-[#7ca2ee] text-white dark:text-[#0b2353] rounded-full px-6 py-2 flex justify-center items-center mb-5 pb-2.5 mt-4">
         Pay again
       </button>
 

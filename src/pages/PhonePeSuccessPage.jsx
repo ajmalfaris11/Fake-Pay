@@ -15,7 +15,7 @@ export default function PaymentSuccessScreen() {
 
 
     return (
-        <div className="max-w-sm min-h-screen bg-[#262626] text-white font-sans flex flex-col items-center relative">
+        <div className="max-w-sm min-h-screen dark:bg-[#262626] text-white font-sans flex flex-col items-center relative">
             {/* Header */}
             <div className="w-full bg-[#28A745] text-center pt-5 h-[40vh] relative flex flex-col items-center ">
                 <div className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center items-center mb-4">
@@ -30,42 +30,42 @@ export default function PaymentSuccessScreen() {
             </div>
 
             {/* User Info Card */}
-            <div className="w-full p-2 absolute top-[22.5vh]">
-                <div className="w-full bg-[#191919] rounded-xl p-6 flex flex-col space-y-4 mb-4 ">
+            <div className="w-full p-2 absolute top-[22vh]">
+                <div className="w-full bg-white dark:bg-[#191919] rounded-xl p-6 flex flex-col space-y-4 mb-6 shadow-md light:border-[1px] border-gray-200 ">
                     <div className="flex flex-col items-center justify-between">
                         <div className="flex items-start justify-start w-full ">
-                            <div className="w-[60px] h-[60px] bg-[#27b4fc] rounded-3xl flex items-center justify-center text-2xl mr-6">
+                            <div className="w-[60px] h-[60px] bg-[#5d19b9] dark:bg-[#27b4fc] rounded-3xl flex items-center justify-center text-2xl mr-6">
                                 FF
                             </div>
                             <div className='flex flex-col w-[70%]'>
                                 <div>
-                                    <h3 className="text-xl font-bold">{receiverName}</h3>
-                                    <p className="text-sm text-gray-400">fashionfriday.co@oksbi</p></div>
+                                    <h3 className="text-xl font-bold dark:text-white text-[#1e1e1e]">{receiverName}</h3>
+                                    <p className="text-sm text-[#6c6c6c] dark:text-gray-400">fashionfriday.co@oksbi</p></div>
 
                                 <div className="flex items-center justify-between w-full mt-2">
-                                    <div className="text-2xl font-semibold">{`₹${amtFormate(amount)}`}</div>
-                                    <button className="text-[#853cd8] text-sm font-medium">Split Expense</button>
+                                    <div className="text-2xl font-semibold text-[#1e1e1e] dark:text-white">{`₹${amtFormate(amount)}`}</div>
+                                    <button className="text-[#5d19b9] dark:text-[#853cd8] text-sm font-semibold">Split Expense</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="flex items-center mt-2 border-t-[1px] border-gray-800 pt-4 justify-between">
-                        <button className="flex items-center text-sm text-white gap-3 border-r-[1px] border-gray-800 w-[50%]">
-                            <div className="bg-[#853cd8] bg-opacity-30 p-2 rounded-full w-[45px] h-[45px] flex items-center justify-center text-[#853cd8]">
+                    <div className="flex items-center mt-2 border-t-[1px] dark:border-gray-800 border-gray-200 pt-4 justify-between">
+                        <button className="flex items-center text-sm text-white gap-3 border-r-[1px] dark:border-gray-800 border-gray-200 w-[50%]">
+                            <div className="bg-[#ceaeff] dark:bg-[#853cd8] dark:bg-opacity-30 bg-opacity-30 p-2 rounded-full w-[45px] h-[45px] flex items-center justify-center text-[#853cd8]">
                                 <span className="material-symbols-outlined">
                                     article
                                 </span>
                             </div>
-                            <p className='text-xs'>View Details</p>
+                            <p className='text-xs text-[#6c6c6c] dark:text-gray-400'>View Details</p>
                         </button>
                         <button className="flex items-center text-sm text-white gap-3 w-[50%] pl-4">
-                            <div className="bg-[#853cd8] bg-opacity-30 p-2 rounded-full w-[45px] h-[45px] flex items-center justify-center text-[#853cd8]">
+                            <div className="bg-[#ceaeff] dark:bg-[#853cd8] dark:bg-opacity-30 bg-opacity-30 p-2 rounded-full w-[45px] h-[45px] flex items-center justify-center text-[#853cd8]">
                                 <span className="material-symbols-outlined">
                                     share
                                 </span>
                             </div>
-                            <p className='text-xs'>Share Receipt</p>
+                            <p className='text-xs text-[#6c6c6c] dark:text-gray-400'>Share Receipt</p>
                         </button>
                     </div>
                 </div>
