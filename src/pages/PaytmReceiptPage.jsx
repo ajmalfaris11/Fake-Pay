@@ -158,7 +158,7 @@ export default function PaytmReceiptPage() {
             </div>
 
             {/* Footer */}
-            <div className="flex items-center justify-center gap-2 text-xs text-gray-500">
+            <div className="flex items-center justify-center gap-2 text-xs text-gray-500 sticky bg-white bottom-0">
                 <div className='flex justify-center items-center flex-row text-[5px]'>
                     <p className='text-end font-bold leading-none'>Powered <br /> by</p>
                     <img
