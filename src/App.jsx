@@ -8,6 +8,7 @@ import PaytmSuccessPage from "./pages/PaytmSuccessPage";
 import PhonePeSuccessPage from "./pages/PhonePeSuccessPage";
 import GpaySuccessPage from "./pages/GpaySuccessPage";
 import PaytmReceiptPage from "./pages/PaytmReceiptPage"
+import LatestPaytmSuccessPage from "./pages/LatestPaytmSuccessPage";
 
 
 export default function App() {
@@ -22,7 +23,7 @@ export default function App() {
         <Route path="/phonepe/success/page" element={<PhonePeSuccessPage />} />
         <Route path="/paytm/success/page" element={<PaytmSuccessPage />} />
         <Route path="/paytm/receipt/page" element={<PaytmReceiptPage />} />
-
+        <Route path="/paytm/latest_success/page" element={<LatestPaytmSuccessPage />} />
       </Routes>
     </Router>
   );
