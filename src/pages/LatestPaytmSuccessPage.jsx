@@ -21,7 +21,7 @@ export default function LatestPaytmSuccessPage() {
     return (
         <div className="max-w-sm mx-auto min-h-screen font-sans">
 
-            <div className='flex flex-col items-center p-3 bg-gradient-to-b [background-image:linear-gradient(to_bottom,white_0%,#d4f0fb_60%,#d4f0fb_100%)]'>
+            <div className='flex flex-col items-center p-4 bg-gradient-to-b [background-image:linear-gradient(to_bottom,white_0%,#d4f0fb_60%,#d4f0fb_100%)]'>
                 {/* Top Nav */}
                 <div className="w-full flex items-center justify-between mb-2">
                     <span className="material-symbols-outlined flex items-center">
@@ -51,7 +51,7 @@ export default function LatestPaytmSuccessPage() {
                 </p>
 
                 {/* Buttons */}
-                <div className="flex gap-3 my-4 text-gray-900">
+                <div className="flex gap-3 mt-4 mb-2 text-gray-900">
                     <button className="px-3 py-2 rounded-full bg-white text-[14px] font-medium">
                         Check Balance
                     </button>
@@ -64,8 +64,8 @@ export default function LatestPaytmSuccessPage() {
                 </div>
             </div>
 
-            <hr className='border-[5px] w-full border-[#55b3f1]' />
-            <hr className='border-[5px] w-full border-[#12286d]' />
+            <hr className='border-[4px] w-full border-[#55b3f1]' />
+            <hr className='border-[4px] w-full border-[#12286d]' />
 
 
             {/* Scratch Card */}
