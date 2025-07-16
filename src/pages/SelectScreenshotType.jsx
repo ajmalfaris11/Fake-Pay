@@ -42,6 +42,21 @@ export default function SelectScreenshotType() {
         </div>
         <p className="w-4/5 ">Receipt Page Screenshot</p>
       </button>
+
+      {platform == "paytm" ? (
+        <button
+          className="w-full bg-white dark:bg-gray-900 text-[#1e40af] dark:text-white p-4 rounded-2xl mb-4 flex items-center justify-between text-xl font-bold shadow-around-md"
+          onClick={() => navigate(`/${platform}/latest_success/input`)}
+        >
+          <div className="w-20 h-20 rounded-2xl bg-white dark:bg-black flex items-center justify-center ">
+          <span className="material-symbols-outlined text-5xl shadow-around-md p-4 rounded-full ">
+              fiber_new
+            </span>
+          </div>
+          <p className="w-4/5 ">Latest Success Page Screenshot</p>
+        </button>
+      ) : null}
+
     </div>
   );
 }
