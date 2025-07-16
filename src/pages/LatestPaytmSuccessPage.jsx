@@ -45,14 +45,14 @@ export default function LatestPaytmSuccessPage() {
                 </div>
 
                 {/* Date, Time & Ref */}
-                <p className="text-sm text-gray-900">
-                    {formatDateTime(formData.dateTime)} &nbsp; <span className='text-black font-black text-md'>•&nbsp;</span> {`Ref. No: ${formData.upiTransactionId}`}
+                <p className="text-[13px] text-gray-900">
+                    {formatDateTime(formData.dateTime)}&nbsp; <span className='text-black font-black text-md'>•&nbsp;</span> {`Ref. No: ${formData.upiTransactionId}`}
                     <span className="material-symbols-outlined text-sm ml-2 cursor-pointer rotate-180 flip scale-x-[-1] st">content_copy</span>
                 </p>
 
                 {/* Buttons */}
-                <div className="flex gap-4 my-4 text-gray-900">
-                    <button className="px-3 py-1.5 rounded-full bg-white text-[14px] font-medium">
+                <div className="flex gap-3 my-4 text-gray-900">
+                    <button className="px-3 py-2 rounded-full bg-white text-[14px] font-medium">
                         Check Balance
                     </button>
                     <button className="px-3 py-1.5 rounded-full bg-white text-[14px] font-medium">
