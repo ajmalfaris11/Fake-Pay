@@ -79,7 +79,7 @@ export default function PaytmReceiptPage() {
                     <p className="text-sm text-gray-900">{`Rupee ${amountInWords(formData.amount)} Only`}</p>
 
                     <div className="flex items-center gap-4 mt-3">
-                        <span className="flex items-center bg-green-100 text-gray-900 font-semibold px-4 py-1.5 rounded-full text-sm bg-opacity-50">
+                        <span className="flex items-center bg-green-200 text-gray-900 font-semibold px-4 py-1.5 rounded-full text-sm bg-opacity-25">
                             💵 Transfers
                         </span>
                         <button className="text-blue-500 text-sm text-[#03b7f9]">Edit</button>
@@ -100,15 +100,15 @@ export default function PaytmReceiptPage() {
                                 UPI ID: fashionfriday.co@oksbi on <br /> Google Pay
                             </p>
                             <div className="flex space-x-4 mt-4">
-                                <button className="border-[1.8px] border-[#03b7f9] text-[#03b7f9] px-3 py-1 rounded-[6px] text-sm">
+                                <button className="border-[1.5px] border-[#03b7f9] text-[#03b7f9] px-3 py-1.5 rounded-[6px] text-sm">
                                     Pay Again
                                 </button>
-                                <button className="border-[1.8px] border-[#03b7f9] text-[#03b7f9] px-3 py-1 rounded-[6px] text-sm">
+                                <button className="border-[1.5px] border-[#03b7f9] text-[#03b7f9] px-3 py-1.5 rounded-[6px] text-sm">
                                     View History
                                 </button>
                             </div>
                         </div>
-                        <div className="w-11 h-11 rounded-full bg-pink-500 flex items-center justify-center text-pink-400 font-bold bg-opacity-30">
+                        <div className="w-11 h-11 rounded-full bg-pink-300 flex items-center justify-center text-pink-700 font-bold bg-opacity-30">
                             {`${receiverFirst}${receiverSecond}`}
                         </div>
                     </div>
@@ -137,7 +137,7 @@ export default function PaytmReceiptPage() {
                             </p>
                             <p className="text-[#03b7f9] text-sm mt-1 font-semibold">Payment Details </p>
                         </div>
-                        <div className="w-11 h-11 rounded-full bg-pink-500 flex items-center justify-center text-pink-400 font-bold bg-opacity-30">
+                        <div className="w-11 h-11 rounded-full bg-pink-300 flex items-center justify-center text-pink-700 font-bold bg-opacity-30">
                             {`${senderFirst}${senderSecond}`}
                         </div>
                     </div>
