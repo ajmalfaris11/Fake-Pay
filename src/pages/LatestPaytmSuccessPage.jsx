@@ -29,8 +29,8 @@ export default function LatestPaytmSuccessPage() {
 
                 {/* Amount */}
                 <div className="flex items-center my-3">
-                    <span className="text-4xl font-bold mr-2">₹1</span>
-                    <img src={tick} alt="success" className='w-7' />
+                    <span className="text-[42px] font-bold mr-2">₹1</span>
+                    <img src={tick} alt="success" className='w-8' />
                 </div>
 
                 {/* Date, Time & Ref */}
@@ -41,20 +41,20 @@ export default function LatestPaytmSuccessPage() {
 
                 {/* Buttons */}
                 <div className="flex gap-4 my-4 text-gray-900">
-                    <button className="px-3 py-1.5 rounded-full bg-white border text-[10px] font-medium shadow">
+                    <button className="px-3 py-1.5 rounded-full bg-white border text-[14px] font-medium shadow">
                         Check Balance
                     </button>
-                    <button className="px-3 py-1.5 rounded-full bg-white border text-[10px] font-medium shadow">
+                    <button className="px-3 py-1.5 rounded-full bg-white border text-[14px] font-medium shadow">
                         Pay Again
                     </button>
-                    <button className="px-3 py-1.5 rounded-full bg-green-600 text-white text-[10px] font-medium shadow flex items-center gap-1">
+                    <button className="px-3 py-1.5 rounded-full bg-green-600 text-white text-[14px] font-medium shadow flex items-center gap-1">
                         <FontAwesomeIcon icon={faWhatsapp} className="text-white en-500 text-lg" /> Share
                     </button>
                 </div>
             </div>
 
-            <hr className='border-[5px] border-black w-full border-[#55b3f1]' />
-            <hr className='border-[5px] border-black w-full border-[#12286d]' />
+            <hr className='border-[5px] w-full border-[#55b3f1]' />
+            <hr className='border-[5px] w-full border-[#12286d]' />
 
 
             {/* Scratch Card */}
