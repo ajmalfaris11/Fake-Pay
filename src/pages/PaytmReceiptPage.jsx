@@ -20,8 +20,8 @@ export default function PaytmReceiptPage() {
     const location = useLocation();
     const formData = location.state || {};
 
-    const { first: receiverFirst, second: receiverSecond } = getInitials(formData.receiverName);
-    const { first: senderFirst, second: senderSecond } = getInitials(formData.senderName);
+    const { first: receiverFirst, second: receiverSecond } = getInitials(formData.receiverName.toUpperCase());
+    const { first: senderFirst, second: senderSecond } = getInitials(formData.senderName.toUpperCase());
 
     // Find the matching bank
     const selectedBank = bankList.find(
@@ -61,7 +61,7 @@ export default function PaytmReceiptPage() {
                     </span>
                     <h1 className="font-semibold text-xl">Sent Successfully</h1>
                 </div>
-                <div className="flex space-x-4 text-[#58b0ce] text-xs font-semibold">
+                <div className="flex space-x-4 text-[#03b7f9] text-xs font-semibold">
                     <button>Share</button>
                     <button>Help</button>
                 </div>
@@ -70,13 +70,13 @@ export default function PaytmReceiptPage() {
             {/* Main Content */}
             <div className="flex-1 p-4">
                 {/* Amount Card */}
-                <div className="bg-white rounded-xl shadow-sm border-[1.5px] px-4 py-6 mb-4">
+                <div className="bg-white rounded-xl shadow-sm border-[1.5px] px-4 py-6 mb-3">
                     <p className="text-xs text-gray-700 font-semibold mb-1">Amount</p>
-                    <div className="flex items-center space-x-2 text-3xl font-bold">
+                    <div className="flex items-center space-x-3 text-3xl font-bold text-black">
                         <span>{`₹${amtFormate(formData.amount)}`}</span>
-                        <img src={tick} alt="success" className='w-6 h-6 brightness-125' />
+                        <img src={tick} alt="success" className='w-7 h-7 brightness-125' />
                     </div>
-                    <p className="text-xs text-gray-700 font-[550] mt-1">{`Rupee ${amountInWords(formData.amount)} Only`}</p>
+                    <p className="text-xs text-gray-700 font-[500] mt-1">{`Rupee ${amountInWords(formData.amount)} Only`}</p>
 
                     <div className="flex items-center gap-4 mt-3">
                         <span className="flex items-center bg-green-100 text-gray-800 font-semibold px-4 py-1.5 rounded-full text-sm bg-opacity-50">
@@ -93,17 +93,17 @@ export default function PaytmReceiptPage() {
                             <p className='text-xs font-semibold text-gray-800 mb-1'>
                                 To
                             </p>
-                            <p className="font-bold flex items-center">
+                            <p className="font-bold flex items-center text-black">
                                 {`${formData.receiverName}`} <img src={blueTick} alt="blue tick" className='w-4 ml-1.5' />
                             </p>
-                            <p className="text-xs mt-1 font-[500] text-gray-800">
+                            <p className="text-xs mt-1 font-[500] text-gray-700">
                                 UPI ID: fashionfriday.co@oksbi on <br /> Google Pay
                             </p>
                             <div className="flex space-x-4 mt-4">
-                                <button className="border-[1.8px] border-[#03b7f9] text-[#03b7f9] px-3 py-1 rounded-[8px] text-sm">
+                                <button className="border-[1.8px] border-[#03b7f9] text-[#03b7f9] px-3 py-1 rounded-[6px] text-sm">
                                     Pay Again
                                 </button>
-                                <button className="border-[1.8px] border-[#03b7f9] text-[#03b7f9] px-3 py-1 rounded-[8px] text-sm">
+                                <button className="border-[1.8px] border-[#03b7f9] text-[#03b7f9] px-3 py-1 rounded-[6px] text-sm">
                                     View History
                                 </button>
                             </div>
@@ -121,7 +121,7 @@ export default function PaytmReceiptPage() {
                             <p className='text-xs font-semibold text-gray-800 mb-1'>
                                 From
                             </p>
-                            <p className="font-bold flex items-center">
+                            <p className="font-bold flex items-center text-black">
                                 {`${formData.senderName}`}
                             </p>
                             <p className="text-xs mt-1 font-[500] text-gray-800">
@@ -132,7 +132,7 @@ export default function PaytmReceiptPage() {
                             <p className="text-xs mt-1 font-[500] text-gray-800">
                                 {`Paid at ${formatDateTime(formData.dateTime)}`}
                             </p>
-                            <p className="text-xs mt-1 font-[500] text-gray-800">
+                            <p className="text-xs mt-5 font-[500] text-gray-800">
                                 {`UPI Ref No: ${formData.upiTransactionId}`} <span className="text-[#03b7f9] font-semibold ml-2">Copy</span>
                             </p>
                             <p className="text-[#03b7f9] text-sm mt-1 font-semibold">Payment Details </p>
