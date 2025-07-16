@@ -12,7 +12,7 @@ export default function LatestPaytmSuccessPage() {
     return (
         <div className="max-w-sm mx-auto min-h-screen font-sans">
 
-            <div className='flex flex-col items-center p-4 bg-gradient-to-b to-[#d4f0fb] from-[#ffff]'>
+            <div className='flex flex-col items-center p-3 bg-gradient-to-b to-[#d4f0fb] from-[#ffff]'>
                 {/* Top Nav */}
                 <div className="w-full flex items-center justify-between mb-2">
                     <span className="material-symbols-outlined text-2xl">arrow_back</span>
@@ -24,7 +24,7 @@ export default function LatestPaytmSuccessPage() {
                     </div>
                 </div>
                 {/* Receiver Info */}
-                <h2 className="text-lg font-semibold text-center text-black">Ajmal Faris K</h2>
+                <h2 className="text-xl font-semibold text-center text-black">Ajmal Faris K</h2>
                 <p className="text-sm text-gray-800 ">UPI ID: fashionfriday.co@oksbi</p>
 
                 {/* Amount */}
@@ -34,13 +34,13 @@ export default function LatestPaytmSuccessPage() {
                 </div>
 
                 {/* Date, Time & Ref */}
-                <p className="text-xs text-gray-800">
-                    14 Jul, 01:13 PM &nbsp; <span className='text-black text-bold text-md'>•&nbsp;</span> Ref. No: 519564229108
-                    <span className="material-symbols-outlined text-sm ml-1 cursor-pointer rotate-180 flip scale-x-[-1]">content_copy</span>
+                <p className="text-sm text-gray-900">
+                    14 Jul, 01:13 PM &nbsp; <span className='text-black font-black text-md'>•&nbsp;</span> Ref. No: 519564229108
+                    <span className="material-symbols-outlined text-sm ml-2 cursor-pointer rotate-180 flip scale-x-[-1] st">content_copy</span>
                 </p>
 
                 {/* Buttons */}
-                <div className="flex gap-4 my-4 text-gray-900">
+                <div className="flex gap-3 my-4 text-gray-900">
                     <button className="px-3 py-1.5 rounded-full bg-white border text-[14px] font-medium shadow">
                         Check Balance
                     </button>
