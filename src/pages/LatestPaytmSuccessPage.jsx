@@ -1,4 +1,5 @@
 import React from 'react';
+import { data, useLocation } from "react-router-dom";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
@@ -7,15 +8,25 @@ import tick from '../assets/paytm_tick.webp';
 import paytmLogo from '../assets/Paytm_Logo.png';
 import paytm_cashback from '../assets/paytm_cashback.png'
 
+import { amtFormate } from "../utils/helpers";
+import { formatDateTime } from "../utils/helpers";
+
+
 
 export default function LatestPaytmSuccessPage() {
+
+    const location = useLocation();
+    const formData = location.state || {};
+
     return (
         <div className="max-w-sm mx-auto min-h-screen font-sans">
 
-            <div className='flex flex-col items-center p-3 bg-gradient-to-b to-[#d4f0fb] from-[#ffff]'>
+            <div className='flex flex-col items-center p-3 bg-gradient-to-b [background-image:linear-gradient(to_bottom,white_0%,#d4f0fb_60%,#d4f0fb_100%)]'>
                 {/* Top Nav */}
                 <div className="w-full flex items-center justify-between mb-2">
-                    <span className="material-symbols-outlined text-2xl">arrow_back</span>
+                    <span className="material-symbols-outlined flex items-center">
+                        west
+                    </span>
 
                     <img src={paytmLogo} alt="Paytm Logo" className="h-6" />
 
@@ -24,31 +35,31 @@ export default function LatestPaytmSuccessPage() {
                     </div>
                 </div>
                 {/* Receiver Info */}
-                <h2 className="text-xl font-semibold text-center text-black">Ajmal Faris K</h2>
+                <h2 className="text-xl font-semibold text-center text-black">{formData.receiverName}</h2>
                 <p className="text-sm text-gray-800 ">UPI ID: fashionfriday.co@oksbi</p>
 
                 {/* Amount */}
                 <div className="flex items-center my-3">
-                    <span className="text-[42px] font-bold mr-2">₹1</span>
+                    <span className="text-[42px] font-bold mr-2">{`₹${amtFormate(formData.amount)}`}</span>
                     <img src={tick} alt="success" className='w-8' />
                 </div>
 
                 {/* Date, Time & Ref */}
                 <p className="text-sm text-gray-900">
-                    14 Jul, 01:13 PM &nbsp; <span className='text-black font-black text-md'>•&nbsp;</span> Ref. No: 519564229108
+                    {formatDateTime(formData.dateTime)} &nbsp; <span className='text-black font-black text-md'>•&nbsp;</span> {`Ref. No: ${formData.upiTransactionId}`}
                     <span className="material-symbols-outlined text-sm ml-2 cursor-pointer rotate-180 flip scale-x-[-1] st">content_copy</span>
                 </p>
 
                 {/* Buttons */}
-                <div className="flex gap-3 my-4 text-gray-900">
-                    <button className="px-3 py-1.5 rounded-full bg-white border text-[14px] font-medium shadow">
+                <div className="flex gap-4 my-4 text-gray-900">
+                    <button className="px-3 py-1.5 rounded-full bg-white text-[14px] font-medium">
                         Check Balance
                     </button>
-                    <button className="px-3 py-1.5 rounded-full bg-white border text-[14px] font-medium shadow">
+                    <button className="px-3 py-1.5 rounded-full bg-white text-[14px] font-medium">
                         Pay Again
                     </button>
-                    <button className="px-3 py-1.5 rounded-full bg-green-600 text-white text-[14px] font-medium shadow flex items-center gap-1">
-                        <FontAwesomeIcon icon={faWhatsapp} className="text-white en-500 text-lg" /> Share
+                    <button className="px-3 py-1.5 rounded-full bg-green-600 text-white text-[14px] font-medium flex items-center gap-1">
+                        <FontAwesomeIcon icon={faWhatsapp} className="text-white en-500 text-[16px]" /> Share
                     </button>
                 </div>
             </div>

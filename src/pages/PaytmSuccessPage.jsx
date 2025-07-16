@@ -64,7 +64,7 @@ export default function PaytmSuccessPage() {
 
                 {/* UPI Ref */}
                 <div className="flex flex-col h-[30%] col">
-                    <p className="text-gray-700 font-[410] text-lg">UPI Ref. No: <span className='tracking-widest'> {`${formData.upiTransactionId.slice(0, 7)}`} <span className='font-[900] text-gray-900'>{`${formData.upiTransactionId.slice(7)}`}</span> </span></p>
+                    <p className="text-gray-700 font-[410] text-lg">UPI Ref. No: <span className='tracking-widest'> {`${formData.upiTransactionId}`} <span className='font-[900] text-gray-900'>{`${formData.upiTransactionId.slice(7)}`}</span> </span></p>
                     <p className='text-gray-600 text-md'>{`${formatDateTime(formData.dateTime)}`}</p>
                 </div>
             </div>
