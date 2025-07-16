@@ -71,15 +71,15 @@ export default function PaytmReceiptPage() {
             <div className="flex-1 p-4">
                 {/* Amount Card */}
                 <div className="bg-white rounded-xl shadow-sm border-[1.5px] px-4 py-6 mb-3">
-                    <p className="text-sm text-gray-800 font-semibold">Amount</p>
+                    <p className="text-sm text-gray-900 font-semibold tracking-wider">Amount</p>
                     <div className="flex items-center space-x-3 text-3xl font-bold text-black my-2">
                         <span>{`₹${amtFormate(formData.amount)}`}</span>
                         <img src={tick} alt="success" className='w-7 h-7 brightness-125' />
                     </div>
-                    <p className="text-sm text-gray-800">{`Rupee ${amountInWords(formData.amount)} Only`}</p>
+                    <p className="text-sm text-gray-900">{`Rupee ${amountInWords(formData.amount)} Only`}</p>
 
                     <div className="flex items-center gap-4 mt-3">
-                        <span className="flex items-center bg-green-100 text-gray-800 font-semibold px-4 py-1.5 rounded-full text-sm bg-opacity-50">
+                        <span className="flex items-center bg-green-100 text-gray-900 font-semibold px-4 py-1.5 rounded-full text-sm bg-opacity-50">
                             💵 Transfers
                         </span>
                         <button className="text-blue-500 text-sm text-[#03b7f9]">Edit</button>
@@ -90,13 +90,13 @@ export default function PaytmReceiptPage() {
                     {/* To Section */}
                     <div className="flex justify-between items-start mb-6">
                         <div>
-                            <p className='text-sm font-semibold text-gray-800 mb-1'>
+                            <p className='text-sm font-semibold text-gray-900 mb-1 tracking-wider'>
                                 To
                             </p>
                             <p className="font-bold flex items-center text-black text-lg">
                                 {`${formData.receiverName}`} <img src={blueTick} alt="blue tick" className='w-5 ml-1.5' />
                             </p>
-                            <p className="text-sm mt-1  text-gray-800">
+                            <p className="text-sm mt-1  text-gray-900">
                                 UPI ID: fashionfriday.co@oksbi on <br /> Google Pay
                             </p>
                             <div className="flex space-x-4 mt-4">
@@ -118,21 +118,21 @@ export default function PaytmReceiptPage() {
                     {/* From Section */}
                     <div className="flex justify-between items-start">
                         <div>
-                            <p className='text-sm font-semibold text-gray-800 mb-1'>
+                            <p className='text-sm font-semibold text-gray-900 mb-1 tracking-wider'>
                                 From
                             </p>
-                            <p className="font-bold flex items-center text-black">
+                            <p className="font-bold flex items-center text-black text-lg">
                                 {`${formData.senderName}`}
                             </p>
-                            <p className="text-sm mt-1  text-gray-800">
+                            <p className="text-sm mt-1  text-gray-900">
                                 {`UPI ID: ${formData.senderName.replace(/\s+/g, '').toLowerCase()}${selectedBank.upiSuffix}`}</p>
-                            <p className="text-sm mt-1  text-gray-800 flex align-center gap-1">
+                            <p className="text-sm mt-1  text-gray-900 flex align-center gap-1">
                                 {`${selectedBank.name} - ${generateAcNo()}`} <img src={selectedBank.logo} alt="bank logo" className='w-3 h-3  mt-0.5' />
                             </p>
-                            <p className="text-sm mt-1  text-gray-800">
+                            <p className="text-sm mt-5  text-gray-900">
                                 {`Paid at ${formatDateTime(formData.dateTime)}`}
                             </p>
-                            <p className="text-sm mt-5  text-gray-800">
+                            <p className="text-sm mt-1  text-gray-900">
                                 {`UPI Ref No: ${formData.upiTransactionId}`} <span className="text-[#03b7f9] font-semibold ml-2">Copy</span>
                             </p>
                             <p className="text-[#03b7f9] text-sm mt-1 font-semibold">Payment Details </p>
@@ -171,7 +171,7 @@ export default function PaytmReceiptPage() {
                 <img
                     src={sbi}
                     alt="paytm logo"
-                    className="w-4 h-auto brightness-"
+                    className="w-4 h-auto"
                 />
                 <p className='font-extrabold'>SBI</p>
             </div>
