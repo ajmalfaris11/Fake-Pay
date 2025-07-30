@@ -90,7 +90,7 @@ export default function InputPage() {
               value={formData.senderName}
               placeholder="Enter your name"
               onChange={handleChange}
-              className="border border-gray-300 dark:border-gray-800 rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-blue-500 dark:bg-black"
+              className="border border-gray-300 dark:border-gray-800 rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-blue-500 dark:bg-black dark:text-white"
               required
             />
           </div>
@@ -105,7 +105,7 @@ export default function InputPage() {
               value={formData.amount}
               placeholder="Payment amount"
               onChange={handleChange}
-              className="border border-gray-300 dark:border-gray-800 rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-indigo-500 dark:bg-black"
+              className="border border-gray-300 dark:border-gray-800 rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-indigo-500 dark:bg-black dark:text-white"
               required
             />
           </div>
@@ -120,7 +120,7 @@ export default function InputPage() {
               value={formData.message}
               placeholder="Message (optional)"
               onChange={handleChange}
-              className="border border-gray-300 dark:border-gray-800 rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-indigo-500 dark:bg-black"
+              className="border border-gray-300 dark:border-gray-800 rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-indigo-500 dark:bg-black dark:text-white"
             />
           </div>
 
@@ -147,7 +147,7 @@ export default function InputPage() {
               name="senderBank"
               value={formData.senderBank}
               onChange={handleChange}
-              className="border border-gray-300 dark:border-gray-800 rounded-lg px-4 py-2 w-full bg-white dark:bg-black text-gray-700 dark:text-gray-200 focus:ring-2 focus:ring-indigo-500"
+              className="border border-gray-300 dark:border-gray-800 rounded-lg px-4 py-2 w-full bg-white dark:bg-black text-gray-700 dark:text-white focus:ring-2 focus:ring-indigo-500"
               required
             >
               <option value="">-- Select Bank --</option>
