@@ -51,8 +51,8 @@ export default function InputPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Add current date & time when form is submitted
-    const currentDateTime = new Date().toISOString();
+    // Use custom date if provided, else use current
+    const currentDateTime = formData.dateTime || new Date().toISOString();
 
     const updatedFormData = {
       ...formData,
@@ -60,6 +60,7 @@ export default function InputPage() {
       dateTime: currentDateTime,
       googleTransactionId: generateTransactionId(),
     };
+
     setFormData(updatedFormData);
     navigate(`/${platform}/${option}/page`, { state: updatedFormData });
   };
@@ -124,8 +125,7 @@ export default function InputPage() {
             />
           </div>
 
-
-          {/* <div>
+          <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-600 mb-1">
               Date & Time
             </label>
@@ -134,10 +134,10 @@ export default function InputPage() {
               name="dateTime"
               value={formData.dateTime}
               onChange={handleChange}
-              className="border border-gray-300 dark:border-gray-800 rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-indigo-500 dark:bg-black"
-              required
+              placeholder="Leave empty to use current date & time"
+              className="border border-gray-300 dark:border-gray-800 rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-indigo-500 dark:bg-black dark:text-white"
             />
-          </div> */}
+          </div>
 
           <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-600 mb-1">
@@ -158,7 +158,6 @@ export default function InputPage() {
               ))}
             </select>
           </div>
-
 
           <button
             type="submit"
